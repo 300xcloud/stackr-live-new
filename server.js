@@ -6,7 +6,7 @@ const { applyDecision } = require('./decisionEngine');
 const { logDecision } = require('./auditLogger');
 
 const app = express();
-app.use(bodyParser.json());
+app.use(express.Json());
 
 app.post('/decision', async (req, res) => {
   try {
@@ -25,5 +25,6 @@ app.post('/decision', async (req, res) => {
 });
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Stackr running on port ${PORT}`));
+
 
 
