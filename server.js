@@ -23,20 +23,7 @@ app.post('/decision', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
-const express = require("express");
-const app = express();
-
-// ✅ PUT ROUTES HERE
-app.get("/", (req, res) => {
-  res.json({ status: "Stackr is live 🚀" });
-});
-
-// other routes like /decision can go here
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Stackr running on port ${PORT}`);
-});
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Stackr running on port ${PORT}`));
+
 
